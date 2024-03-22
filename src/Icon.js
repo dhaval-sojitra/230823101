@@ -1,33 +1,13 @@
-function Icon(props) {
+function Icon({path, text, fill, viewbox}) {
     return(
     <>
-    <meta charSet="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram Like Button</title>
-    <div>
-      <button
-        style={{
-          backgroundColor: "transparent",
-          border: "none",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center"
-        }}
-      >
-        <svg
-          aria-label="Like"
-          height={24}
-          viewBox="0 0 48 48"
-          width={24}
-          style={{ marginRight: 6 }}
-        >
-          <path d={props.path} fill="none"
-          stroke="#262626"
-          strokeWidth={2}/>
-        </svg>
-        <span style={{ fontSize: 14, color: "#262626" }}>{props.name}</span>
-      </button>
-    </div>
+    
+    <div style={{ display: 'flex', alignItems: 'center', gap: '10px'  }}>
+            <svg  style={{paddingTop: 5}} width="24" height="24"  fill={fill} stroke="currentColor"  viewBox={viewbox} color='rgb(122, 122, 122)' >
+            <path d={path} />
+            </svg>
+            <span style={{textAlign: "center" , fontSize: "14px", color: "rgb(122, 122, 122)"}}>{text}</span>
+            </div>
   </>
     );
 }
